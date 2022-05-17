@@ -1,0 +1,10 @@
+<nav class="navbar navbar-light" style="background-color: #5b4b52; margin-bottom: 0.5em">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="{% url 'main' %}">Parser</a>
+        <form class="d-flex" action="{{ request.path }}" method="get">
+            {% csrf_token %}
+            <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
+            <button value="Send" class="btn btn-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
